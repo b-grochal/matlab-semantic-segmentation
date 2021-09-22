@@ -13,11 +13,11 @@ numFiles = numel(imagesDatastore.Files);
 shuffledIndices = randperm(numFiles);
 
 % Use 80% of the images for training.
-numTrain = round(0.80 * numFiles);
+numTrain = round(0.1 * numFiles);
 trainingIdx = shuffledIndices(1:numTrain);
 
 % Use 5% of the images for validation
-numVal = round(0.05 * numFiles);
+numVal = round(0.1 * numFiles);
 valIdx = shuffledIndices(numTrain+1:numTrain+numVal);
 
 % Use the rest for testing.
