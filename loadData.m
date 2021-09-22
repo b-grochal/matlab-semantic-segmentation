@@ -15,6 +15,20 @@ classes = [
 "Tlo"
 ];
 
+labelsIds = pixelLabelIds();
+
+labelsDirectory = fullfile(pwd,"data","labels");
+pixelsDatastore = pixelLabelDatastore(labelsDirectory,classes,labelsIds);
+
+C = readimage(pixelsDatastore, 1);
+colorMap = dataColorMap;
+B = labeloverlay(I,C,'ColorMap',colorMap);
+imshow(B)
+pixelLabelColorbar(colorMap,classes);
+
+
+function labelsIds = pixelLabelIds()
+
 labelsIds = {...
     % Słup
     [
@@ -31,15 +45,7 @@ labelsIds = {...
     000, 204, 000; ...
     ]
 };
-
-labelsDirectory = fullfile(pwd,"data","labels");
-pixelsDatastore = pixelLabelDatastore(labelsDirectory,classes,labelsIds);
-
-C = readimage(pixelsDatastore, 1);
-colorMap = dataColorMap;
-B = labeloverlay(I,C,'ColorMap',colorMap);
-imshow(B)
-pixelLabelColorbar(colorMap,classes);
+end
 
 function pixelLabelColorbar(cmap, classNames)
 % Add a colorbar to the current axis. The colorbar is formatted
