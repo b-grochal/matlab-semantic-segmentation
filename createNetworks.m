@@ -19,4 +19,4 @@ fcn3=fcnLayers(imageSizeFcn, numberOfClasses, 'Type','32s');
 unet=unetLayers(imageSize, numberOfClasses);
 
 segnet1=segnetLayers(imageSize, numberOfClasses, 'vgg16');
-segnet4=segnetLayers(imageSize, numberOfClasses, 'vgg19'); 
+segnet2=segnetLayers(imageSize, numberOfClasses, 'vgg19'); 
