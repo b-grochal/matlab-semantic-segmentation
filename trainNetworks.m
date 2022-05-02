@@ -46,11 +46,11 @@
 % save(networkPath, 'deeplab8Network');
 % save(infoPath, 'deeplab8Info');
 
-[fcn1Network, fcn1Info] = trainNetwork(dsTrain,fcn1,options);
-networkPath = fullfile(pwd, 'networks', 'fcn1Network');
-infoPath = fullfile(pwd, 'networks', 'fcn1Info');
-save(networkPath, 'fcn1Network');
-save(infoPath, 'fcn1Info');
+% [fcn1Network, fcn1Info] = trainNetwork(dsTrain,fcn1,options);
+% networkPath = fullfile(pwd, 'networks', 'fcn1Network');
+% infoPath = fullfile(pwd, 'networks', 'fcn1Info');
+% save(networkPath, 'fcn1Network');
+% save(infoPath, 'fcn1Info');
 
 % [fcn2Network, fcn2Info] = trainNetwork(dsTrain,fcn2,options);
 % networkPath = fullfile(pwd, 'networks', 'fcn2Network');
@@ -64,11 +64,11 @@ save(infoPath, 'fcn1Info');
 % save(networkPath, 'fcn3Network');
 % save(infoPath, 'fcn3Info');
 
-[unetNetwork, unetInfo] = trainNetwork(dsTrain,unet,options);
-networkPath = fullfile(pwd, 'networks', 'unetNetwork');
-infoPath = fullfile(pwd, 'networks', 'unetInfo');
-save(networkPath, 'unetNetwork');
-save(infoPath, 'unetInfo');
+% [unetNetwork, unetInfo] = trainNetwork(dsTrain,unet1,options);
+% networkPath = fullfile(pwd, 'networks', 'unetNetwork');
+% infoPath = fullfile(pwd, 'networks', 'unetInfo');
+% save(networkPath, 'unet1Network');
+% save(infoPath, 'unet1Info');
 
 [segnet1Network, segnet1Info] = trainNetwork(dsTrain,segnet1,options);
 networkPath = fullfile(pwd, 'networks', 'segnet1Network');

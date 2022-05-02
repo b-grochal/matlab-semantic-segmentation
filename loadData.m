@@ -5,7 +5,6 @@ imagesDatastore = imageDatastore(imagesDirectory);
 disp("Loading labels");
 classes = [
 "Slup"
-"Izolator"
 "Tlo"
 ];
 
